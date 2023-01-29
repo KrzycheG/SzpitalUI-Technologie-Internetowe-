@@ -1,0 +1,37 @@
+<form>
+  <div class = "info">Podaj Pesel pacjenta którego dane chcesz edytować: </div>
+
+  <label for="Pesel">Pesel</label>
+  <input type="Pesel" id="pesel" [(ngModel)]="pesel" name="pesel">
+  <tr></tr>
+  <input type="hidden" #selection>
+  <div class = "info">Wybierz Pole które chcesz edytować</div>
+  <Button class = "editButton" (click) ="selection.value ='name'; whatToChange='name'">Imię</Button>
+  <Button class = "editButton" (click) ="selection.value ='surname'; whatToChange='surname'">Nazwisko</Button>
+  <Button class = "editButton" (click) ="selection.value ='dob'; whatToChange='dob'">Data Urodzenia</Button>
+  <Button class = "editButton" (click) ="selection.value ='pesel'; whatToChange='pesel'">Pesel</Button>
+
+  <div class = "choices" [ngSwitch]="selection.value">
+
+    <pre *ngSwitchCase="'name'">
+        <h3>Wpisz nowe imię</h3>
+    </pre>
+
+    <pre *ngSwitchCase="'surname'">
+        <h3>Wybierz Nowe Nazwisko:</h3>
+    </pre>
+
+    <pre *ngSwitchCase="'dob'">
+        <h3>Wpisz nową date urodzenia</h3>
+    </pre>
+
+    <pre *ngSwitchCase="'pesel'">
+        <h3>Wpisz nowy pesel</h3>
+    </pre>
+
+  </div>
+  <input type="value" id="value" [(ngModel)]="valuee" name="value">
+  <tr></tr>
+  <Button class = "editButton" (click) = editPatient() >Edytuj</Button>
+
+</form>

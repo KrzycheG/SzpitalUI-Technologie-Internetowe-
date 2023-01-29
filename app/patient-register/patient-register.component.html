@@ -1,0 +1,20 @@
+<form class = "registry">
+
+  <label for="name">Imię</label>
+  <input id="name" [(ngModel)]="name" name="name">
+
+  <label for="surname">Nazwisko:</label>
+  <input id="surname" [(ngModel)]="surname" name = "surname">
+
+  <label for="dob">Data Urodzenia:</label>
+  <input id="dob" [(ngModel)]="dob" name = "dob">
+
+  <label for="pesel">Pesel</label>
+  <input id="pesel" [(ngModel)]="pesel" name = "pesel">
+
+  <label for="password">Hasło</label>
+  <input id="password" [(ngModel)]="password" name = "password">
+
+  <button (click)="register()">Zarejestruj</button>
+
+</form>

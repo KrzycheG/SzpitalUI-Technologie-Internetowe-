@@ -1,0 +1,14 @@
+
+<h1>Lista dostępnych specjalistów:</h1>
+
+<app-all-appoitments></app-all-appoitments>
+
+<h1>Wybierz nazwe wizyty na ktorą chcesz sie zapisać: </h1>
+<label for="badanie">Badanie </label>
+<input type="badanie" id="badanie" [(ngModel)]="badanie" name="id badania">
+
+<h1>Podaj pesel </h1>
+<label for="pesel">Pesel</label>
+<input type="pesel" id="pesel" [(ngModel)]="pesel" name="pesel">
+
+<button (click) = makeAppotiment()>Zapisz Się na wizyte</button>

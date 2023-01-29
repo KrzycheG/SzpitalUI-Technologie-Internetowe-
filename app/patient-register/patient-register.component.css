@@ -1,0 +1,4 @@
+.registry {
+  display: flex;
+  flex-direction: column;
+}
